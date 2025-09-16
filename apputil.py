@@ -115,6 +115,7 @@ def task_3():
     return df_fixedgender.groupby('gender')['age'].mean()
 
 
+
 # testing task_3()
 print(task_3())
 
