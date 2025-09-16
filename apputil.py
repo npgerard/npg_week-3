@@ -90,11 +90,14 @@ print(task_1())
 #   - the total number of entries (immigrant admissions) for each year, `total_admissions`
 def task_2():
     '''returns a dataframe with year and total_admissions columns'''
+
+    #create a copy of the original dataframe to avoid modifying it
+    df_copy = df_bellevue.copy()
     #add a new column 'year' extracted from the 'admission_date' column
-    df_bellevue['year'] = pd.to_datetime(df_bellevue['date_in'], errors='coerce').dt.year
+    df_copy['year'] = pd.to_datetime(df_copy['date_in'], errors='coerce').dt.year
 
     # group by year and count the number of entries for each year
-    df_yearly = df_bellevue.groupby('year').size().reset_index(name='total_admissions')
+    df_yearly = df_copy.groupby('year').size().reset_index(name='total_admissions')
     return df_yearly
  
 
