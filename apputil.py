@@ -34,7 +34,7 @@ print(fib(50))
 
 
 # exercise 2: convert integer to binary using recursion
-def to_binary(n: int) -> int:
+def to_binary(n: int) -> str:
     '''returns the binary representation of n'''
     # binary of n <= 1 is n
     if n <= 1: return n
