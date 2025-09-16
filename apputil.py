@@ -32,6 +32,7 @@ def fibonacci(n):
 print(fib(50))
 
 
+
 # exercise 2: convert integer to binary using recursion
 def to_binary(n: int) -> int:
     '''returns the binary representation of n'''
