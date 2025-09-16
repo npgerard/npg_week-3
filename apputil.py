@@ -20,6 +20,14 @@ def fib(n):
     # by recursively calling fib()
     else: return fib(n-1) + fib(n-2)
 
+def fibonacci(n):
+    '''returns the fibonacci number at position n'''
+    # if n is 0 or 1, return n because there is no sequence to add
+    if n <= 1: return n
+    # for any other number, return the sum of the previous 2 Fibonacci numbers
+    # by recursively calling fib()
+    else: return fib(n-1) + fib(n-2)
+
 
 print(fib(50))
 
